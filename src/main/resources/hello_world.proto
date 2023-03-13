@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.kgromov.grpc.demo;
+
+service HelloWorldService {
+  rpc request(HelloWorldRequest) returns (HelloWorldResponse) {}
+}
+
+message HelloWorldRequest {
+  string requestId = 1;
+  string message = 2;
+}
+
+message HelloWorldResponse {
+  string status = 1;
+}
