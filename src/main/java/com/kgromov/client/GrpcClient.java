@@ -1,6 +1,5 @@
-package com.kgromov;
+package com.kgromov.client;
 
-import com.kgromov.client.HelloWorldBlockingClient;
 import com.kgromov.grpc.demo.HelloWorldRequest;
 import com.kgromov.grpc.demo.HelloWorldResponse;
 import io.grpc.ManagedChannel;
@@ -8,7 +7,7 @@ import io.grpc.ManagedChannelBuilder;
 
 import java.util.UUID;
 
-public class Main {
+public class GrpcClient {
     public static void main(String[] args) throws Exception {
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080)
                 .usePlaintext()
